@@ -9,7 +9,7 @@ const REDIRECT_URI = process.env.REDIRECT_URI;
 
 const getdocusigncode = async (req, res) => {
     try {
-            const url = `https://account-d.docusign.com/oauth/auth?response_type=code&scope=signature&client_id=7ab15a3b-613a-41e9-bd12-2fbf8c4257f9&redirect_uri=https://cobaltrename.onrender.com/api/redirect`
+            const url = `https://account-d.docusign.com/oauth/auth?response_type=code&scope=signature&client_id=${INTEGRATION_KEY}&redirect_uri=https://cobaltrename.onrender.com/api/redirect`
             res.redirect(url)
     } catch (error) {
         reject(error);
