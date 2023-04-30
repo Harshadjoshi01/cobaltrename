@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const { getdocusignaccesstoken } = require('../controllers/auth.controller');
+const { getdocusignaccesstoken, getdocusigncode, getuserinfo } = require('../controllers/auth.controller');
 
 router.get('/redirect', getdocusignaccesstoken);
+router.get('/accesstoken', getdocusigncode);
+router.get('/userinfo', getuserinfo);
 
 module.exports = router;

@@ -15,6 +15,7 @@ app.use(cors());
 
 
 app.use('/api', require('./routes/auth.router'));
+app.use('/api', require('./routes/template-envelope.router'));
 // app.use('/api', require('./Routes/userprofile.router'));
 // app.use('/api', require('./Routes/posts.router'));
 app.get('/', (req, res) => {
